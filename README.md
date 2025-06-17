@@ -4,7 +4,7 @@ A new Flutter project. `flutter new my_app`
 
 ```bash
 lib/
-├── core/   
+├── core/
 |   |-- errors/                # Common utilities, themes, errors, constants
 |   |   |-- fealures.dart
 |   |   |-- exceptions.dart
@@ -40,7 +40,7 @@ lib/
 |           |   |-- task_event.dart
 │           │   └── task_state.dart
 │           └── pages/
-|               |-- task_list_page.dart 
+|               |-- task_list_page.dart
 │               └── task_form_page.dart
 |-- injection_container.dart
 ├── main.dart
@@ -69,4 +69,13 @@ flutter run
 
 ```bash
 flutter pub get
+```
+
+### To deploy your Flutter application as an APK for Android and an IPA for iOS
+
+```bash
+# Android
+flutter build apk --release
+# iOS
+flutter build ipa --release
 ```
