@@ -4,37 +4,45 @@ A new Flutter project. `flutter new my_app`
 
 ```bash
 lib/
-├── core/                   # Common utilities, themes, errors, constants
-|-- |-- fealures.dart
-|-- |-- exceptions.dart
-|-- |-- network/
-|-- |-- |-- network_info.dart
-|-- |-- usecases/
-|-- |-- |-- usecase.dart
-|-- |-- utis/
-|-- |-- |-- constants.dart
+├── core/   
+|   |-- errors/                # Common utilities, themes, errors, constants
+|   |   |-- fealures.dart
+|   |   |-- exceptions.dart
+|   |-- network/
+|   |   |-- network_info.dart
+|   |-- usecases/
+|   |   |-- usecase.dart
+|   |-- utis/
+|       |-- constants.dart
 ├── features/
-│   └── ride_booking/
+│   └── tasks/
 │       ├── data/
 │       │   ├── datasources/
-│       │   │   └── ride_remote_data_source.dart
+|       |   |   |-- tasks_local_data_source.dart
+│       │   │   └── tasks_remote_data_source.dart
 │       │   ├── models/
-│       │   │   └── ride_model.dart
+│       │   │   └── tasks_model.dart
 │       │   └── repositories/
-│       │       └── ride_repository_impl.dart
+│       │       └── task_repository_impl.dart
 │       ├── domain/
 │       │   ├── entities/
-│       │   │   └── ride.dart
+│       │   │   └── tasks.dart
 │       │   ├── repositories/
-│       │   │   └── ride_repository.dart
+│       │   │   └── tasks_repository.dart
 │       │   └── usecases/
-│       │       └── request_ride.dart
+|       |       |-- get_task.dart
+|       |       |-- add_task.dart
+|       |       |-- delete_task.dart
+│       │       └── update_task.dart
 │       └── presentation/
-│           ├── cubit/
-│           │   ├── ride_cubit.dart
-│           │   └── ride_state.dart
+│           ├── bloc/
+│           │   ├── task_bloc.dart
+|           |   |-- task_event.dart
+│           │   └── task_state.dart
 │           └── pages/
-│               └── ride_booking_page.dart
+|               |-- task_list_page.dart 
+│               └── task_form_page.dart
+|-- injection_container.dart
 ├── main.dart
 ```
 
